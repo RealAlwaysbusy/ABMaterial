@@ -1,0 +1,10 @@
+@font-face {
+	font-family:"Hastagirl";
+	src:url("../../font/hastagirl_one/HastagirlDemo.ttf") format("truetype");
+}
+
+.hastagirl {
+	color:#000000;
+	font-family:Hastagirl;
+	font-size:25px;
+}
