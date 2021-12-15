@@ -1,0 +1,389 @@
+.container .abmfilemanager {
+	padding-right: 0.75rem;
+    padding-left: 0.75rem;	
+}
+.abmfilemanager {
+	height: 100%;    
+}
+.abmfileheader {
+	height: 54px;
+}
+.abmfileheader > .row {
+	height: 100%;
+	margin-bottom: 0px;
+	background-color: #ffa726;
+}
+.abmfilefooter {
+	height: 54px;
+}
+.abmfilefooter > .row {
+	height: 100%;
+	margin-bottom: 0px;
+	background-color: #ffa726;
+}
+.abmfilebreadcrumbs {
+	height: 58px;
+	position: relative;	
+	
+}
+.abmfilebreadcrumb {
+	margin-left: 10px;
+	margin-right: 10px;
+	position: relative;
+	top: 50%;
+	-ms-transform: translateY(-50%);
+    transform: translateY(-50%);
+	color: white !important;
+	font-size: 16px !important;
+	float: left;
+	font-family: Roboto;	
+	cursor: pointer;
+}
+.abmfilebreadcrumbsep {
+	margin-left: 0px;
+	margin-right: 0px;
+	position: relative;
+	top: 50%;
+	-ms-transform: translateY(-50%);
+    transform: translateY(-50%);
+	color: white !important;
+	font-size: 16px !important;
+	float: left;
+	font-weight: bold;
+	font-family: Roboto;
+	cursor: pointer;
+}
+.abmfilebreadcrumbsep.last {
+	display: none;
+}
+.abmfilewrapper {
+	height: calc(100% - 108px);	
+}
+.abmfileheight {
+	height: 100%;	
+}
+.abmfileheight > .col {
+	height: 100%;
+}
+.abmfilesidebar {
+	background-color: rgb(250,250,250);
+	border-right: 1px solid rgb(238,238,238);
+	padding-left: 3px !important;
+	padding-right: 0px !important;	
+}
+.abmfilesallwrapper {
+	padding-left: 3px !important;
+    padding-right: 0px !important;
+}
+@media screen and (max-width: 601px) {
+	.abmfilelistitemsize {
+		display: none;
+	}
+}
+@media screen and (max-width: 991px) {
+	.abmfilesidebar {
+		display: none;
+	}
+	.abmfilebreadcrumb.last {
+		font-size: 14px !important;
+	}
+	.abmfilebreadcrumbsep.last {
+		display: block;
+	}
+	.abmfilebreadcrumbsep:not(.last) {
+		display: none;
+	}
+	.abmfilebreadcrumb:not(.last) {
+		display: none;
+	}
+	.abmfilelistitemdate {
+		display: none;
+	}
+}
+.abmfilesidebar > .abmfoldersall > .row {
+	margin-bottom: 0px;
+}
+.abmfilefolder > a {
+	margin-top: 8px;
+	color: rgb(82, 121, 146) !important;
+	cursor: pointer;
+}
+.abmfilefolder > a > i{
+	padding-top: 8px;
+}
+.abmfilefolder > a > span{
+	position: relative;
+	top: -5px;
+	left: 4px;
+	color: rgb(82, 121, 146);
+}
+.abmfilefolder.active, .abmfilefolder.active > a, .abmfilefolder.active > a > span {
+	color: #ffa726 !important;
+}
+.abmfolderlev0 {
+	margin-left: 0px;
+}
+.abmfolderlev1 {
+	margin-left: 10px;
+}
+.abmfolderlev2 {
+	margin-left: 20px;
+}
+.abmfolderlev3 {
+	margin-left: 30px;
+}
+.abmfolderlev4 {
+	margin-left: 40px;
+}
+.abmfolderlev5 {
+	margin-left: 50px;
+}
+.abmfolderlev6 {
+	margin-left: 60px;
+}
+.abmfolderlev7 {
+	margin-left: 70px;
+}
+.abmfolderlev8 {
+	margin-left: 80px;
+}
+.abmfolderlev9 {
+	margin-left: 90px;
+}
+.abmfilesall {
+	height: 100%;
+	overflow-y: auto;
+    overflow-x: hidden;
+}
+.abmfoldersall {
+	height: 100%;
+	overflow-y: auto;
+    overflow-x: hidden;
+}
+.abmfilebig.active {
+	/*
+	background-color: #ffa726;
+	color: white !important;	
+	*/
+	border-radius: 4px;
+	border: 2px solid #ffb74f !important;
+}
+.abmfilebig.active.move {
+	/*
+	background-color: #ffa726;
+	color: white !important;	
+	*/
+	border-radius: 4px;
+	border: 2px dashed #ffb74f !important;
+}
+.abmfilebig.active.copy {	
+	background-color: rgb(250,250,250);
+}
+.abmfilebig {
+	cursor: pointer;
+	position: relative;
+	float: left;
+	width: 100px;
+	height: 100px;
+	margin-top: 10px;
+	margin-right: 10px;
+	background-color: transparent;
+	color: black;
+	display: block;
+	color: #ffa726 !important;		
+	border-radius: 4px;
+	border: 2px solid transparent;
+}
+/*
+.abmfilebig:hover {
+	border-radius: 4px;
+	border: 2px solid rgb(10,110,186) !important;
+}
+*/
+.abmfilethumbnailbig {
+	margin-left: 0px;
+	margin-right: 0px;
+	position: relative;
+	top: 25%;
+	left: 85%;
+	-ms-transform: translateX(-50%);
+    transform: translateX(-50%);
+}
+.abmfilebiglabel {
+	margin-left: 5px;
+	margin-right: 5px;
+	text-align: center;
+	padding-top: 6px;
+	font-size: 14px !important;
+	text-overflow: ellipsis;
+	overflow: hidden; 
+	width: 90px; 
+	white-space: nowrap;
+}
+.abmfilebiglabelimg {
+	margin-left: 5px;
+	margin-right: 5px;
+	text-align: center;
+	padding-top: 20px;
+	font-size: 14px !important;
+	text-overflow: ellipsis;
+	overflow: hidden; 
+	width: 90px; 
+	white-space: nowrap;
+}
+.col.abmfileoverflow {
+	overflow: hidden;
+}
+
+.abmfilebuttons {
+	float: right;
+	margin-right: 12px;
+    margin-top: -15px;
+}
+
+.abmfileinput {
+	outline: none;
+}
+.abmfileinput[type=search] {
+	-webkit-appearance: textfield;
+	-webkit-box-sizing: content-box;
+	font-family: inherit;
+	font-size: 100%;
+}
+.abmfileinput::-webkit-search-decoration,
+.abmfileinput::-webkit-search-cancel-button {
+	display: none; 
+}
+
+.abmfileinput[type=search] {
+	background: transparent url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABIAAAASCAYAAABWzo5XAAAABmJLR0QA/wD/AP+gvaeTAAAACXBIWXMAABy5AAAcuQFX5e1GAAAAB3RJTUUH4gINDxcXkv7d+AAAAYxJREFUOMuV08+Lj1EUx/HPJdmIKQ2poRk/02j4D6woGzVlM01Z4g9Q1nbK2pqyYZTSJEtlY0GWRklDaBRNZjGGSV4295luj+83fOr2nO65533Oc8+5SRUK9uI6FrCONbzAFexJI+QPYQtm8cNwvcX0UFCtZKYJ+IkVvKvBq3UPPuHcQBjGmkrWMIfxxn8C802ixzg6CHStqWRuUDbswt0GdnHQ/byszq+YGADpvmfrGbiB7S1nU5ID1V4ppSwipZQM0PskC9XenWSkD+rS/0oyDJIkJcnmrtAmbgP0qtqjmOp+p1sN+FCSw9X+mGS5D7pX7a1JrmJnKSXdquAjSWaT7EjyPcnzUspq/7LH8KHpyG2cwjFMYRoPGv9rnBw2SzP40hxexhM8bTrVaR23sG8Y7HwNHKRvvarVuRpvO9HCjic5nWQyyWjt5FKSZ0k+J7mQ5EwTcj/J5VLK4kZ3esAR7McEtjX7k3jUq2y+G+S0Lf+bcAQPe7A7+Vf1ns3B3kNeyv+oB5vATbzBpd/yqj0YP9Ed2QAAAABJRU5ErkJggg==') no-repeat 9px center;	
+	border: solid 0px #transparent !important;
+	padding: 9px 10px 9px 32px;
+	width: 55px;	
+	-webkit-border-radius: 0em;
+	-moz-border-radius: 0em;
+	border-radius: 0em;	
+	-webkit-transition: all .5s;
+	-moz-transition: all .5s;
+	transition: all .5s;	
+}
+
+.abmfileinput:-moz-placeholder {
+	color: #999;
+}
+.abmfileinput::-webkit-input-placeholder {
+	color: #999;
+}
+
+.abmfileinput[type=search] {
+	width: 15px;
+	padding-left: 10px;
+	color: transparent;
+	cursor: pointer;
+	height: 16px;
+    margin-bottom: 0px;
+    margin-top: 10px;
+	/*float: right;*/
+	border-bottom: 0px solid transparent;
+	box-shadow: 0 0px 0 0 transparent !important;	
+}
+.abmfileinput[type=search]:hover {
+	background-color: #transparent;
+}
+.abmfileinput[type=search]:focus {
+	width: 150px;
+	padding-left: 32px;
+	color: #fff;
+	background-color: transparent;
+	cursor: auto;
+	border-bottom: 1px solid white !important;	
+}
+.abmfileinput:-moz-placeholder {
+	color: transparent;
+}
+.abmfileinput::-webkit-input-placeholder {
+	color: transparent;
+}
+.abmfilelistheader {
+	margin-top: 8px;
+	margin-bottom: 8px;
+	padding-bottom: 8px;
+	border-bottom: 2px solid rgb(238,238,238);	
+}
+.abmfilelistheader > .col > a > span {
+	font-weight: bold;
+	color: #ffa726 !important;
+}
+.abmfilelistitem {
+	/*margin-top: 8px;*/
+	margin-bottom: 8px;
+	padding-bottom: 8px;
+	padding-top: 8px;
+	border-bottom: 1px solid rgb(238,238,238);
+	cursor: pointer;
+	color: rgb(82, 121, 146);
+	border: 2px solid transparent;
+	/*box-shadow: 0 2px 2px -2px gray;*/
+}
+.abmfilelistitem-file {
+	white-space: nowrap;
+	color: #ffa726 !important;
+}
+.abmfileright {
+	text-align:right;
+}
+.abmfilelistitem-file > i {
+	font-size: 15px;
+	margin-right: 10px;
+	position: relative;
+	top:2px;
+}
+.abmfilelistitem.active {	
+	border-radius: 4px;
+	border: 2px solid #ffb74f !important;
+}
+.abmfilelistitem.active.move {
+	border-radius: 4px;
+	border: 2px dashed #ffb74f !important;
+}
+.abmfilelistitem.active.copy {	
+	background-color: rgb(250,250,250);
+}
+.abmfileinfo > span {
+	color: white;	
+}
+.abmfiletooltip {
+    position: relative;
+    display: inline-block;
+    /*border-bottom: 1px dotted black;*/
+}
+
+/* Tooltip text */
+.abmfiletooltip .abmfiletooltiptext {
+    visibility: hidden;
+    width: 120px;
+    background-color: rgb(82, 121, 146);
+    color: #fff;
+    text-align: center;
+	font-size: 12px;
+    padding: 5px 0;
+    border-radius: 6px;
+ 
+    /* Position the tooltip text - see examples below! */
+    position: absolute;
+    z-index: 1;
+	width: 60px;
+    bottom: 100%;
+    left: 50%; 
+	top: -46px;
+	height: 26px;
+    margin-left: -30px;
+	opacity: 0;
+    transition: opacity 1s;
+}
+
+/* Show the tooltip text when you mouse over the tooltip container */
+.abmfiletooltip:hover .abmfiletooltiptext {
+    visibility: visible;
+	opacity: 1;
+}

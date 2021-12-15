@@ -1,0 +1,186 @@
+.abmcomposer {
+	max-width: 100%;
+	transition: max-width 500ms;
+    margin: 0 auto;
+    position: relative;
+	color: #333;
+    font-family: "Avenir Next W01", "Avenir Next", "Avenir", helvetica, arial, sans-serif;
+    font-weight: 500;
+    font-size: 20px;
+    text-rendering: optimizeLegibility;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    -moz-font-feature-settings: 'liga', 'kern';
+    direction: ltr;
+	padding: 2em 0;
+    padding-top: 0;
+}
+.abmcomposer-section {
+	display: -webkit-box;
+    display: -webkit-flex;
+    display: -moz-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: stretch;
+    -ms-flex-align: stretch;
+    -webkit-align-items: stretch;
+    -moz-align-items: stretch;
+    align-items: stretch;
+    -webkit-box-pack: start;
+    -ms-flex-pack: start;
+    -webkit-justify-content: flex-start;
+    -moz-justify-content: flex-start;
+    justify-content: flex-start;
+    max-width: 100%;
+	margin-left: 100px;
+    padding-bottom: 2em;
+	position: relative;
+}
+.abmcomposer-section:after {
+	box-sizing: inherit;
+    outline: 0;
+}
+.abmcomposer-sidebar {
+    -webkit-box-flex: 0;
+    -webkit-flex-grow: 0;
+    -moz-flex-grow: 0;
+    -ms-flex-positive: 0;
+    flex-grow: 0;
+    -webkit-flex-shrink: 0;
+    -moz-flex-shrink: 0;
+    -ms-flex-negative: 0;
+    flex-shrink: 0;
+    position: relative;
+    padding-right: 1em;
+    top: 0em;
+}
+.abmcomposer-sidebar:after {
+	box-sizing: inherit;
+    outline: 0;
+}
+.abmcomposer-sidebar:before {
+	box-sizing: inherit;
+    outline: 0;
+	content: "";
+    display: block;
+    z-index: 0;
+    position: absolute;
+    width: 0.375em;
+    top: 0;
+    left: 1.3125em;
+    height: calc(100% + 2em);
+    background-color: #999;	
+}
+.abmcomposer-background {
+	border: 0.25em solid white;
+    height: 3em;
+    margin: -0.25em;
+    width: 3em;
+	background-color: #999;
+    border-radius: 3em;
+    text-align: center;
+    position: relative;
+    z-index: 1;
+    line-height: 3em;
+    font-weight: 800;
+    color: white;
+}
+.abmcomposer-background:before {
+	box-sizing: inherit;
+    outline: 0;
+}
+.abmcomposer-background:after {
+	box-sizing: inherit;
+    outline: 0;
+}
+.abmcomposer-label:after {
+	content: attr(data-label);
+    position: absolute;
+    top: 0;
+    right: 3em;
+    color: #999;
+    font-size: 1.2em;
+    text-align: right;
+	box-sizing: inherit;
+    outline: 0;
+}
+.abmcomposer-section-last {
+	display: -webkit-box;
+    display: -webkit-flex;
+    display: -moz-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: stretch;
+    -ms-flex-align: stretch;
+    -webkit-align-items: stretch;
+    -moz-align-items: stretch;
+    align-items: stretch;
+    -webkit-box-pack: start;
+    -ms-flex-pack: start;
+    -webkit-justify-content: flex-start;
+    -moz-justify-content: flex-start;
+    justify-content: flex-start;
+    max-width: 100%;
+	margin-left: 100px;
+    padding-bottom: 2em;
+}
+.abmcomposer-section-last:after {
+	box-sizing: inherit;
+    outline: 0;
+}
+.abmcomposer-section-last:before {
+	box-sizing: inherit;
+    outline: 0;
+}
+.abmcomposer-icon {
+	width: 3em;
+    height: 3em;
+    background-color: #999;
+    border-radius: 3em;
+    text-align: center;
+    position: relative;
+    z-index: 1;
+    line-height: 3em;
+    font-weight: 800;
+    color: white;	
+}
+.abmcomposer-sidebar-last {
+    -webkit-box-flex: 0;
+    -webkit-flex-grow: 0;
+    -moz-flex-grow: 0;
+    -ms-flex-positive: 0;
+    flex-grow: 0;
+    -webkit-flex-shrink: 0;
+    -moz-flex-shrink: 0;
+    -ms-flex-negative: 0;
+    flex-shrink: 0;
+    position: relative;
+    padding-right: 1em;
+    top: 0em;
+}
+.abmcomposer-sidebar-last:after {
+	box-sizing: inherit;
+    outline: 0;
+}
+.abmcomposer-sidebar-last:before {
+	box-sizing: inherit;
+    outline: 0;
+	content: "";
+    display: block;
+    z-index: 0;
+    position: absolute;
+    width: 0.375em;
+    top: 0;
+    left: 1.3125em;
+    height: 100%;
+    background-color: transparent;
+}
+.abmcomposer-fieldset {
+	background-color: rgba(0,0,0,0.05);
+    padding: 1em;
+	position: relative;
+    border-radius: 10px;
+    width: 100%;
+	box-sizing: inherit;
+    outline: 0;
+}
