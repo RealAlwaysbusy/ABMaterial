@@ -8412,7 +8412,7 @@ function(s) {
         a.fn.characterCounter = function() {
             return this.each(function() {
                 var e, t;
-                void 0 !== a(this).attr("length") && (a(this).on("input", n), a(this).on("focus", n), a(this).on("blur", i), e = a(this), t = a("<span/>").addClass("character-counter").css("float", "right").css("font-size", "12px").css("height", 1), e.parent().append(t))
+                void 0 !== a(this).attr("length") && (a(this).on("input", n), a(this).on("focus", n), a(this).on("blur", i), e = a(this), t = a("<span/>").addClass("character-counter").css("float", "right").css("font-size", "0.8rem").css("height", 1).css("margin-top", "-1rem"), "textarea"==e[0].type&&t.css("margin-top","-1.5rem"), e.parent().append(t))
             })
         }, a(document).ready(function() {
             a("input, textarea").characterCounter()

@@ -6388,7 +6388,7 @@ function(s) {
                 c.attr("data-tooltip-id", e);
                 var t = o("<span></span>").text(c.attr("data-tooltip")),
                     u = o("<div></div>");
-                u.addClass("material-tooltip").append(t).appendTo(o("body")).attr("id", e);
+                u.addClass("material-tooltip no-print").append(t).appendTo(o("body")).attr("id", e);
                 var d = o("<div></div>").addClass("backdrop");
                 d.appendTo(u), d.css({
                     top: 0,
@@ -8658,6 +8658,7 @@ function(s) {
                                     easing: "easeOutQuad",
                                     complete: function() {
                                         s(this).remove();
+										console.log(i.attr('evname'));
 										b4j_raiseEvent("page_parseevent", {eventname: i.attr('evname') + "_closed", eventparams: ""});
                                     }
                                 })
