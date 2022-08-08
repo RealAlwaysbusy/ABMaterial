@@ -77,21 +77,21 @@ function b4j_runFunction(e, t) {
 }
 
 function b4j_eval(e, t) {
-	return new Function(t).apply(null, e)
+    return new Function(t).apply(null, e)
 }
 
 function b4j_connect(e) {
     if ("undefined" != typeof WebSocket) {
         var t, n = window.location;
         t = 0 != n.port ? ("https:" === n.protocol ? "wss://" : "ws://") + n.hostname + ":" + n.port + e + n.search : ("https:" === n.protocol ? "wss://" : "ws://") + n.hostname + e + n.search, "undefined" == typeof RobustWebSocket ? (console.log("Using normal WebSocket"), WebSocketType = "normal", b4j_ws = new WebSocket(t)) : (console.log("Using RobustWebSocket"), WebSocketType = "robust", b4j_ws = new RobustWebSocket(t)), b4j_ws.addEventListener("message", function(e) {
-			/* NEW */
+            /* NEW */
 			if (e.data instanceof Blob) {
 				if (e.data.size == 0) {
 					return;
 				}
 			}
 			/* NEW */
-            var t = JSON.parse(e.data);
+			var t = JSON.parse(e.data);
             "runmethod" === t.etype ? $(t.id)[t.method].apply($(t.id), t.params) : "runmethodWithResult" === t.etype ? b4j_sendData($(t.id)[t.method].apply($(t.id), t.params)) : "setAutomaticEvents" === t.etype ? b4j_addAutomaticEvents(t.data) : "runFunction" === t.etype ? b4j_runFunction(t.prop, t.value) : "runFunctionWithResult" === t.etype ? b4j_sendData(b4j_runFunction(t.prop, t.value)) : "eval" === t.etype ? b4j_eval(t.value, t.prop) : "evalWithResult" === t.etype ? b4j_sendData(b4j_eval(t.value, t.prop)) : "alert" === t.etype && window.alert(t.prop)
         }), b4j_ws.addEventListener("open", function(e) {
             console.log("WebSocket opened, reconnected?: " + IsReconnect), reconnectTimeout && clearInterval(reconnectTimeout);
@@ -7388,7 +7388,7 @@ this.tablist=this._getList().addClass("ui-tabs-nav ui-helper-reset ui-helper-cle
                 f(this).trigger("sliderStart")
             }
         };
-        f.fn.slider = function(e) {
+        f.fn.abmslider = function(e) {
             return t[e] ? t[e].apply(this, Array.prototype.slice.call(arguments, 1)) : "object" != typeof e && e ? void f.error("Method " + e + " does not exist on jQuery.tooltip") : t.init.apply(this, arguments)
         }
     }(jQuery),

@@ -28,23 +28,40 @@ function GetIsReconnect() {
 }
 
 function b4j_sendData(e) {
-    b4j_ws && b4j_ws.send(JSON.stringify({
-        type: "data",
-        data: e
-    }))
+	try {
+		b4j_ws && b4j_ws.send(JSON.stringify({
+			type: "data",
+			data: e
+		}))
+	} catch (e) {
+		console.log(e);
+	}	
 }
 
 function b4j_raiseEvent(e, t) {
     if (b4j_ws) {
         document.getElementById("pageconnectedindicator");
+		if (b4j_ws.readyState == 3) {
+			console.log("No WebSocket Open");
+			window.name= "";
+			b4j_ws.close();
+			location.reload();
+			
+			//b4j_connect(currentE, e, t);	
+			return;
+		}
         try {
-            1 !== b4j_ws.readyState ? !1 === b4j_closeMessage && ("undefined" == typeof RobustWebSocket ? window.console.error("Server is currently not available.") : window.console.error("Connection is closed. Trying to reconnect."), b4j_closeMessage = !0) : (b4j_closeMessage = !1, b4j_ws.send(JSON.stringify({
+			1 !== b4j_ws.readyState ? !1 === b4j_closeMessage && ("undefined" == typeof RobustWebSocket ? window.console.error("Server is currently not available.") : window.console.error("Connection is closed. Trying to reconnect."), b4j_closeMessage = !0) : (b4j_closeMessage = !1, b4j_ws.send(JSON.stringify({
                 type: "event",
                 event: e,
                 params: t
             })))
-        } catch (e) {}
-    }
+        } catch (e) {
+			console.log(e);
+		}
+    } else {
+		console.log("b4j_ws: " + b4j_ws);
+	}
 }
 
 function b4j_addEvent(t, e, n, i) {
@@ -103,7 +120,7 @@ function b4j_connect(e) {
                 i && i.parentElement.removeChild(i)
             }
             var o = document.getElementById("pageconnectedindicator");
-            o && (removeClass(o, "indicatorinactive"), addClass(o, "indicatoractive"))
+            o && (removeClass(o, "indicatorinactive"), addClass(o, "indicatoractive"));			
         }), b4j_ws.addEventListener("close", function(e) {
             IsReconnect = !0, console.log("closed - navigator.onLine:" + navigator.onLine), reconnectTimeout && clearInterval(reconnectTimeout);
             var t = document.getElementById("pageconnectedindicator");
@@ -125,7 +142,7 @@ function b4j_connect(e) {
                 eventname: "beforeunload",
                 eventparams: ""
             }) : e.preventDefault()
-        })
+        })		
     } else window.alert("WebSockets are not supported by your browser.")
 }
 
@@ -7388,7 +7405,7 @@ this.tablist=this._getList().addClass("ui-tabs-nav ui-helper-reset ui-helper-cle
                 f(this).trigger("sliderStart")
             }
         };
-        f.fn.slider = function(e) {
+        f.fn.abmslider = function(e) {
             return t[e] ? t[e].apply(this, Array.prototype.slice.call(arguments, 1)) : "object" != typeof e && e ? void f.error("Method " + e + " does not exist on jQuery.tooltip") : t.init.apply(this, arguments)
         }
     }(jQuery),
